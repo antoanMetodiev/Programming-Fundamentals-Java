@@ -54,10 +54,6 @@ public class AnonymousThreat {
         if (startIndex[0] < 0){
             startIndex[0] = 0;
         }
-        if (startIndex[0] > endIndex[0]){
-
-        }
-
         if (endIndex[0] > texts.size() - 1){
             endIndex[0] = texts.size() - 1;
         }
