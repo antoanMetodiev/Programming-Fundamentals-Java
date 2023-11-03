@@ -12,14 +12,13 @@ public class LegendaryFarming {
         boolean isDone = false;
 
         while (true){
-
             String[] data = scanner.nextLine().toLowerCase().split("\\s+");
             for (int i = 0; i < data.length;) {
-
+                
                 int quantity = Integer.parseInt(data[i]);
                 String item = data[i + 1];
                 i += 2;
-
+                
                 chest.putIfAbsent(item, 0);
                 chest.put(item, chest.get(item) + quantity);
                 if ((item.equals("shards") || item.equals("fragments") || item.equals("motes")) && chest.get(item) >= 250){
