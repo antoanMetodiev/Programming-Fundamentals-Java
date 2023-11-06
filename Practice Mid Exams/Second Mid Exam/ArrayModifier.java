@@ -20,9 +20,7 @@ public class ArrayModifier {
 
                 numbers.set(firstIndex,secondObj);
                 numbers.set(secondIndex,firstObj);
-            }
-
-            else if (command.equals("multiply")){
+            } else if (command.equals("multiply")){
                 int firstIndex = Integer.parseInt(arr[1]);
                 int secondIndex = Integer.parseInt(arr[2]);
                 int obj = numbers.get(firstIndex) * numbers.get(secondIndex);
