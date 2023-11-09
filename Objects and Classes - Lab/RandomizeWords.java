@@ -1,7 +1,6 @@
 import java.util.*;
 import java.util.stream.Collectors;
 public class RandomizeWords {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<String> input = Arrays.stream(scanner.nextLine().split(" "))
@@ -9,9 +8,7 @@ public class RandomizeWords {
 
         int indexes = input.size();
         Random randomNum = new Random();
-
         List<String> saver = new ArrayList<>();
-
         for (int i = 0; i < indexes; i++) {
             int randomIndex = randomNum.nextInt(indexes);
             if (saver.contains(input.get(randomIndex))){
@@ -19,10 +16,8 @@ public class RandomizeWords {
                 continue;
             }
             saver.add(input.get(randomIndex));
-
         }
         printSaverList(saver);
-
     }
 
     private static void printSaverList(List<String> saver) {
