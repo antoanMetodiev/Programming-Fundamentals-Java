@@ -3,9 +3,6 @@ import java.util.Scanner;
 public class SumBigNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BigInteger firstNum = new BigInteger(scanner.nextLine());
-        BigInteger secondNum = new BigInteger(scanner.nextLine());
-        BigInteger result = firstNum.add(secondNum);
-        System.out.println(result);
+        System.out.println(new BigInteger(scanner.nextLine()).add(new BigInteger(scanner.nextLine())));
     }
 }
