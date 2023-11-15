@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class PlantDiscovery {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -7,7 +6,6 @@ public class PlantDiscovery {
         int n = Integer.parseInt(scanner.nextLine());
         Map<String, Plant> collector = new LinkedHashMap<>();
         for (int i = 0; i < n; i++) {
-
             String[] data = scanner.nextLine().split("<->");
             String plant = data[0];
             int rarity = Integer.parseInt(data[1]);
@@ -33,12 +31,10 @@ public class PlantDiscovery {
                     int newRating = Integer.parseInt(data[2]);
                     collector.get(plantName).addRatings(newRating);
                     break;
-
                 case "Update":
                     int newRarity = Integer.parseInt(data[2]);
                     collector.get(plantName).setRarity(newRarity);
                     break;
-
                 case "Reset":
                     collector.get(plantName).removeAllRatings();
                     break;
@@ -50,7 +46,6 @@ public class PlantDiscovery {
             double averageRating = calculateAverageRating(value.getRatings());
             System.out.printf("- %s; Rarity: %d; Rating: %.2f\n", key, value.getRarity(), averageRating);
         });
-
     }
 
     private static double calculateAverageRating(List<Integer> ratings) {
