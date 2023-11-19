@@ -9,7 +9,6 @@ public class MultiplicationSign {
         checkNumbers(num1,num2,num3);
     }
     private static void checkNumbers(int num1,int num2,int num3){
-
         int counter = 0;
         int[] numbers = {num1,num2,num3};
         for (int i = 0; i < numbers.length; i++) {
@@ -21,10 +20,9 @@ public class MultiplicationSign {
                 return;
             }
         }
-        if (counter % 2 == 0) {
+        if (counter % 2 == 0){
             System.out.println("positive");
-        }
-        else{
+        }else{
             System.out.println("negative");
         }
     }
